@@ -1,0 +1,50 @@
+--Create a simple clothing store database
+
+
+
+create TABLE mystore(id integer primary key, name text, gender text, size text, price integer, cost integer);
+
+insert into mystore values( 1, "shirt", "Male", "S", 15.00, 10.00);
+
+insert into mystore values( 2, "shirt", "Male", "M", 20.00, 15.00);
+
+insert into mystore values( 3, "shirt", "Male", "L", 25.00, 20.00);
+
+insert into mystore values( 4, "shirt", "Male", "XL", 30.00, 25.00);
+insert into mystore values( 5, "shirt", "Male", "XXL", 35.00, 30.00);
+
+insert into mystore values( 6, "shirt", "Female", "S", 15.00, 10.00);
+
+insert into mystore values( 7, "shirt", "Female", "M", 20.00, 15.00);
+
+insert into mystore values( 8, "shirt", "Female", "L", 25.00, 20.00);
+
+insert into mystore values( 9, "shirt", "Female", "XL", 30.00, 25.00);
+insert into mystore values( 10, "shirt", "Female", "XXL", 35.00, 30.00);
+
+insert into mystore values( 11, "pants", "Male", "L", 35.00, 30.00);
+
+insert into mystore values( 12, "pants", "Male", "M", 35.00, 30.00);
+
+insert into mystore values( 13, "pants", "Male", "XL", 35.00, 30.00);
+
+
+insert into mystore values( 14, "pants", "Female", "L", 35.00, 30.00);
+
+insert into mystore values( 15, "pants", "Female", "M", 35.00, 30.00);
+
+insert into mystore values( 16, "pants", "Female", "XL", 35.00, 30.00);
+
+--display the database 
+select * from mystore;
+
+--display the database where price is more than $10.00
+select name , gender, price from mystore where price > 10.00;
+
+--display the profit for Male clothing items 
+select name, gender, price - cost from mystore where gender = "Male";
+
+--display the clothing types and variations in store
+select count(name) from mystore;
+
+
